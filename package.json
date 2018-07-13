@@ -1,7 +1,7 @@
 {
-  "name": "passport-auth0",
+  "name": "passport-auth0-loopback",
   "version": "1.0.0",
-  "description": "Auth0 platform authentication strategy for Passport.js",
+  "description": "Auth0 platform authentication strategy for Passport.js supporting loopback-component-passport",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha"
@@ -11,9 +11,8 @@
     "url": "git://github.com/auth0/passport-auth0"
   },
   "author": {
-    "name": "José F. Romaniello",
-    "email": "jfromaniello@gmail.com",
-    "url": "http://joseoncode.com"
+    "name": "Ivor Zhou",
+    "email": "imdreamrunner@gmail.com"
   },
   "license": "MIT",
   "devDependencies": {
