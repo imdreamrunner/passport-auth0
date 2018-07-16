@@ -1,23 +1,26 @@
-# passport-auth0
+# passport-auth0-loopback
 
-[![Build Status](https://travis-ci.org/auth0/passport-auth0.svg?branch=master)](https://travis-ci.org/auth0/passport-auth0)
+This is the auth0 authentication strategy for Passport.js, modified for compatibility with loopback.
 
-This is the auth0 authentication strategy for Passport.js.
+Base on original [passport-auth0](https://github.com/auth0/passport-auth0). Please referring to original documentation for usage, with the following change:
+
+* Pacakge name is changed to `passport-auth0-loopback`.
+* `domain` configuration to `auth0Domain`.
 
 ## Installation
 
-	npm install passport-auth0
+	npm install passport-auth0-loopback
 
 ## Configuration
 
 Take your credentials from the [settings](https://app.auth0.com/#/settings) section in the dashboard and initialize the strategy as follows:
 
 ~~~js
-var Auth0Strategy = require('passport-auth0'),
+var Auth0Strategy = require('passport-auth0-loopback'),
     passport = require('passport');
 
 var strategy = new Auth0Strategy({
-   domain:       'your-domain.auth0.com',
+   auth0Domain:  'your-domain.auth0.com',
    clientID:     'your-client-id',
    clientSecret: 'your-client-secret',
    callbackURL:  '/callback'
@@ -40,10 +43,10 @@ The Auth0 Passport strategy enforces use of `state` parameter in OAuth 2.0 [auth
 If you require the `state` parameter to be omitted (which is not recommended), you can suppress it when calling the Auth0 Passport strategy constructor:
 
 ~~~js
-var Auth0Strategy = require('passport-auth0');
+var Auth0Strategy = require('passport-auth0-loopback');
 
 var strategy = new Auth0Strategy({
-     domain: 'your-domain.auth0.com',
+     auth0Domain: 'your-domain.auth0.com',
      // ...
      state: false
   },
@@ -101,26 +104,3 @@ app.get('/login',
 });
 ~~~
 
-## API access
-
-If you want to get a list of connections or users from auth0, use the [auth0 module](https://github.com/auth0/node-auth0).
-
-## Complete example
-
-A complete example of using this library [here](http://github.com/auth0/passport-auth0).
-
-## Documentation
-
-For more information about [auth0](http://auth0.com) contact our [documentation page](http://docs.auth0.com/).
-
-## Issue Reporting
-
-If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
-
-## Author
-
-[Auth0](auth0.com)
-
-## License
-
-This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more info.
