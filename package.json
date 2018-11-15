@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/auth0/passport-auth0"
+    "url": "git://github.com/imdreamrunner/passport-auth0"
   },
   "author": {
     "name": "Ivor Zhou",
