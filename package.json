@@ -1,6 +1,6 @@
 {
   "name": "passport-auth0-loopback",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Auth0 platform authentication strategy for Passport.js supporting loopback-component-passport",
   "main": "lib/index.js",
   "scripts": {
